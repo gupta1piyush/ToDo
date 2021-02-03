@@ -1,0 +1,92 @@
+/*appling background image and applying its setiing*/
+body{
+    background-image: url('/images/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+/*Styling to TODO heading*/
+#app-heading{
+    text-align: center;
+    font-family: sans-serif;
+}
+/*Appling styling to whole form container*/
+.form-container{
+    margin-left: 30%;
+}
+/*Applying Styling to Select container,date and .text-areai.e select category*/
+.select-category{
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 20px;
+    border: 5px solid black;
+    padding: 8px;
+    font-size: 1rem;
+}
+.date{
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 98px;
+    border: 5px solid black;
+    padding: 5px;
+}
+.text-area{
+    border: 5px solid black;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 42%;
+}
+/*Applying Styling to whole decription container*/
+.description-container{
+    margin-top: 10px;
+    width: 40%;
+    margin-left: 29%;
+    justify-content: center;
+}
+/*Doing list items style to be zero*/
+.description-container ul{
+       list-style: none;
+}
+.description-content{
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+.description-content>div{
+    display: inline-block;
+}
+
+#add-task{
+    background-color: lightslategray;
+    padding: 10px;
+    margin-left: 20%;
+}
+.add-task-container{
+    margin-top: 10px;
+}
+.delete-button{
+    display: inline-block;
+}
+#add-task:hover{
+    cursor: pointer;
+    box-shadow:1px 1px 1px 1px green;
+}
+#description{
+    width: 40%;
+    margin-left: 10px;
+
+}
+#category1{
+    width: 68%;
+}
+#category{
+    width: 40%;
+}
+#category-container{
+    display: flex;
+    width: 50%;
+    background-color:lightpink;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

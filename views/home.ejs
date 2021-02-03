@@ -1,0 +1,58 @@
+<html>
+    <head>
+    <title>
+        ToDo App
+    </title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="/cs/home.css">
+    </head>
+    <body>
+        <h1 id="app-heading">
+            TODO App
+        </h1>
+        <div class="form-container">
+        <form action="/create-description" method="POST">
+            <div class="text-area"><textarea rows="2" cols=80 placeholder="Description............What do you need to do?" name="description"></textarea></div>
+            <div class="select-category">
+                Category
+                <select name="category" id="category1">
+                    <option>Choose a Category</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                    <option value="School">School</option>
+                    <option value="Cleaning">Cleaning</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="date">
+                Due Date
+                <input type="date" name="date">
+            </div>
+            <br>
+            <div class="add-task-container">
+                <button type="submit" id="add-task"><i class="fas fa-plus"></i>  Add Task</button>
+            </div>
+            
+        </form>
+    </div>
+    <div class="description-container">
+            <ul>
+                <% for (let i of description_list) { %>
+                    <li>
+                        <div class="description-content">
+                                <div id="description"><p><%= i.description%></p></div>
+                                <div id="category"><p id="category-container"><%= i.category%></p></div>
+                                <div class="delete-button">
+                                <a href="/delete-contact/?id=<%= i._id %>">
+                                    <i class="fas fa-trash"></i>
+                                </a>  
+                                </div>
+                                <p><%=i.date%></p>
+                        </div>
+                    </li>
+                <%}%>
+            </ul>
+    </div>
+    </body>
+    <script type="text/javascript" src="/js/home.js"></script>
+</html>
